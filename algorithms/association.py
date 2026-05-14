@@ -309,19 +309,17 @@ def render_apriori_page():
             # 散点图
             st.markdown("#### 📈 规则散点图")
             
-            # 转换 frozenset 为字符串以支持 JSON 序列化
+            # 转换为字符串避免JSON序列化问题
             rules_plot = rules.copy()
             rules_plot['antecedents'] = rules_plot['antecedents'].apply(lambda x: ', '.join(list(x)))
             rules_plot['consequents'] = rules_plot['consequents'].apply(lambda x: ', '.join(list(x)))
             
             fig = px.scatter(
                 rules_plot,
-                rules,
                 x='support',
                 y='confidence',
                 size='lift',
                 color='lift',
-                hover_data=['antecedents', 'consequents'],
                 title='支持度 vs 置信度',
                 labels={
                     'support': '支持度',
