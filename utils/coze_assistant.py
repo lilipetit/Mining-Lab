@@ -495,7 +495,7 @@ def get_suggested_questions(algorithm: str) -> list:
             "特征重要性是如何计算的？"
         ],
         '朴素贝叶斯': [
-            "朴素贝叶斯的"朴素"是什么意思？",
+            "朴素贝叶斯的'朴素'是什么意思？",
             "GaussianNB和MultinomialNB的区别是什么？",
             "拉普拉斯平滑的作用是什么？"
         ],
