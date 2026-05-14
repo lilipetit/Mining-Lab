@@ -527,7 +527,7 @@ def render_naive_bayes_page():
             with st.spinner("正在训练..."):
                 
                 if model_type == 'gaussian':
-                    clf = GaussianNB(alpha=alpha)
+                    clf = GaussianNB()
                 else:
                     clf = MultinomialNB(alpha=alpha)
                 
@@ -557,7 +557,7 @@ def render_naive_bayes_page():
             if show_boundary and len(selected_features) >= 2:
                 st.markdown("#### 🗺️ 分类边界")
                 
-                clf_2d = GaussianNB(alpha=alpha) if model_type == 'gaussian' else MultinomialNB(alpha=alpha)
+                clf_2d = GaussianNB() if model_type == 'gaussian' else MultinomialNB(alpha=alpha)
                 clf_2d.fit(X_train[:, :2], y_train)
                 
                 fig = plot_decision_boundary(X_train[:, :2], y_train, clf_2d, title="朴素贝叶斯分类边界")
