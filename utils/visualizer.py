@@ -301,7 +301,7 @@ def plot_decision_boundary(X: np.ndarray, y: np.ndarray, model,
         x=np.arange(x_min, x_max, resolution),
         y=np.arange(y_min, y_max, resolution),
         z=Z,
-        colorscale='Pastel1',
+        colorscale='Blues',
         showscale=False,
         opacity=0.6
     ))
