@@ -1,0 +1,10 @@
+# Mining-Lab: 数据挖掘算法实验平台
+streamlit>=1.28.0
+pandas>=2.0.0
+numpy>=1.24.0
+scikit-learn>=1.3.0
+mlxtend>=0.21.0
+matplotlib>=3.7.0
+seaborn>=0.12.0
+plotly>=5.18.0
+requests>=2.31.0
