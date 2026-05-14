@@ -13,7 +13,7 @@ import time
 
 # Coze API 配置
 COZE_API_BASE = "https://api.coze.cn"
-COZE_API_VERSION = "v1"
+COZE_API_VERSION = "v3"
 
 
 class CozeAssistant:
@@ -342,13 +342,13 @@ def render_chat_interface():
     for msg in st.session_state.chat_history:
         if msg["role"] == "user":
             st.markdown(f"""
-            <div style="background-color: #e8f4f8; padding: 10px; border-radius: 10px; margin: 5px 0;">
+            <div style="background-color: #0d47a1; color: white; padding: 15px; border-radius: 15px; margin: 10px 0; text-align: left;">
             <strong>👤 你：</strong><br>{msg['content']}
             </div>
             """, unsafe_allow_html=True)
         else:
             st.markdown(f"""
-            <div style="background-color: #f0f0f0; padding: 10px; border-radius: 10px; margin: 5px 0;">
+            <div style="background-color: #1a1a2e; color: white; padding: 15px; border-radius: 15px; margin: 10px 0; text-align: left;">
             <strong>🤖 导师：</strong><br>{msg['content']}
             </div>
             """, unsafe_allow_html=True)
